@@ -1,13 +1,21 @@
 class Api::RubyPagesController < ApplicationController
-  def random_fortune
-    render 'fortune_view.json.jbuilder'
+  def your_fortune
+
+    @fortunes = ["You will have a great day!", "Your day will be so-so.", "Might as well stay in bed today!!"]
+    # @fortune = fortunes.sample
+
+    render 'your_fortune.json.jbuilder'
   end
 
-  def lotto_numbers
-    render 'lotto_view.json.jbuilder
-  end
+  # def your_lottery_numbers
 
-  def lotto_numbers
-    render 'lotto_view.json.jbuilder
-  end
+  #   @numbers = []
+
+  #   6.times do
+  #     @numbers << rand(1..60)
+  #   end
+
+  #   render 'your_lottery_numbers.json.jbuilder'
+  # end
 end
+

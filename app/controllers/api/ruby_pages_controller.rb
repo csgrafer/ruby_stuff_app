@@ -7,23 +7,15 @@ class Api::RubyPagesController < ApplicationController
     render 'your_fortune.json.jbuilder'
   end
 
- 
+  def lottery_numbers
 
-  # def your_lottery_numbers
+    @numbers = []
 
-  #   @numbers = []
+    6.times do
+        @numbers << rand(1..60)
+    end
 
-  #   6.times do
-  #     @numbers << rand(1..60)
-  #   end
-  #   return @numbers
-  # end
-
-
-
-
-
-  #   render 'your_lottery_numbers.json.jbuilder'
-  # end
+    render 'lottery_numbers.json.jbuilder'
+  end
 end
 

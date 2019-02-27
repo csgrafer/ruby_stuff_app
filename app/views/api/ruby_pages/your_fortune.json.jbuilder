@@ -1,2 +1,2 @@
-json.message "your_fortune"
+json.message "Your fortune for today:"
 json.fortune @fortune
